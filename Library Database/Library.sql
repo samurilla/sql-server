@@ -3,36 +3,6 @@ GO
 USE db_library
 GO
 
-------------------------------------------------------------------------------------------------------------------------------------------------
-												--RUN THESE LAST--
-
-
--- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"?
-EXEC dbo.uspSharpstownTribe
-
-
--- How many copies of the book titled "The Lost Tribe" are owned by each library branch?
-EXEC dbo.uspTribeCount
-
-
--- Retrieve the names of all borrowers who do not have any books checked out.
-EXEC dbo.uspNoBooks
-
-
--- For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address.
-EXEC dbo.uspSharpstownDueDate
-
-
--- For each library branch, retrieve the branch name and the total number of books loaned out from that branch.
-EXEC dbo.uspLibraryLoaned
-
-
--- Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out.
-EXEC dbo.uspCheckedOutMoreThan5
-
-
--- For each book authored (or co-authored) by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central".
-EXEC dbo.uspFindKing
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -486,3 +456,32 @@ AS
 		WHERE AuthorName = 'Stephen King'
 	;
 GO
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"?
+EXEC dbo.uspSharpstownTribe
+
+
+-- How many copies of the book titled "The Lost Tribe" are owned by each library branch?
+EXEC dbo.uspTribeCount
+
+
+-- Retrieve the names of all borrowers who do not have any books checked out.
+EXEC dbo.uspNoBooks
+
+
+-- For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address.
+EXEC dbo.uspSharpstownDueDate
+
+
+-- For each library branch, retrieve the branch name and the total number of books loaned out from that branch.
+EXEC dbo.uspLibraryLoaned
+
+
+-- Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out.
+EXEC dbo.uspCheckedOutMoreThan5
+
+
+-- For each book authored (or co-authored) by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central".
+EXEC dbo.uspFindKing
